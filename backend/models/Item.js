@@ -27,6 +27,16 @@ const itemSchema = new mongoose.Schema(
       default: "",
       trim: true,
     },
+    countryname: {
+      type: String,
+      default: "",
+      trim: true,
+    },
+    Discount: {
+      type: Number,
+      default: "",
+      min: [0, "Discount cannot be negative"],
+    },
   },
   { timestamps: true }
 );
